@@ -20,7 +20,7 @@ public class EchoClient {
             DataOutputStream dataOut = new DataOutputStream(out);
             while (!Thread.interrupted()) {
                 String messageOut = userIn.readLine();
-                LOG.info("msg client: "+messageOut);
+                LOG.info("msg client: "+ messageOut);
                 sendMessage(dataOut, messageOut);
                 dataOut.flush();
                 String messageIn = getMessage(dataIn);
